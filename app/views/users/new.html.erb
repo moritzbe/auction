@@ -1,0 +1,10 @@
+<h1> Create Auction </h1>
+<%= form_for [@user, @item] do |f| %>
+      <%= f.label :itemname %>
+      <%= f.text_field :itemnam %>
+      <br>
+      <%= f.label :expiry %>
+      <%= f.text_field :expiry %>
+      <br>
+      <%= f.submit 'Save' %>
+<%end%>
