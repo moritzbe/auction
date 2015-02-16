@@ -4,7 +4,7 @@
       <%= f.text_field :itemname %>
       <br>
       <%= f.label :expiry %>
-      <%= f.text_field :expiry %>
+      <%= f.date_field :expiry, :default => Time.now %>
       <br>
       <%= f.submit 'Save' %>
 <%end%>
