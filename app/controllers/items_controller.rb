@@ -11,7 +11,8 @@ class ItemsController < ApplicationController
 	      @item = Item.new(item_params)
 	      @item.user_id = params[:user_id]
 	      if @item.save
-	        redirect_to "/users/#{params[:user_id]}/items/new"
+	      	params.delete :user_id
+	        redirect_to "/"
 	      else
 	        # render "new"
 	      end
