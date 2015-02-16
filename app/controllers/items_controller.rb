@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController
 	def index
-		@items=Item.all 
+		@items = Item.all 
+		@bids = Bid.all
+		@users = User.all
 	end
 
 	def new
@@ -26,3 +28,5 @@ class ItemsController < ApplicationController
 
 
 end
+
+# </ul>costs <%= @bids.find_by(item_id: item.id)

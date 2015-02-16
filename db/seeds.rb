@@ -5,6 +5,18 @@ user3 = User.create(name: "Magellano")
 user4 = User.create(name: "Chris")
 user5 = User.create(name: "Loco")
 
+item1 = Item.create(itemname: "Nuggets", user_id: 1, expiry: "2015-03-21")
+item2 = Item.create(itemname: "Hammok", user_id: 2, expiry: "2015-04-21")
+item3 = Item.create(itemname: "Whiskey", user_id: 3, expiry: "2015-05-21")
+item4 = Item.create(itemname: "Piano", user_id: 4, expiry: "2015-09-21")
+item4 = Item.create(itemname: "Cannons", user_id: 5, expiry: "2015-10-21")
+
+price1 = Bid.create(item_id: 1, user_id: 2, value: 13)
+price2 = Bid.create(item_id: 1, user_id: 3, value: 20)
+price3 = Bid.create(item_id: 1, user_id: 4, value: 27)
+price4 = Bid.create(item_id: 1, user_id: 5, value: 30)
+
+
 
 
 

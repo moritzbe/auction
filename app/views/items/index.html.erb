@@ -1,8 +1,15 @@
-<h3> Here are all items of user X </h3>
+<h3> Here are all items of the users </h3>
 <p> planted in seed to save time</p>
 
 <ul>
 <% @items.each do |item| %>
-	<li><%=item.name %></li>
+    <%sellercode = @users.find_by_id(item.user_id)%>
+    <%seller = sellercode.name%>
+	    <%if !@bids.find_by_item_id(item.id).nil? %>
+	    	<%pricing = @bids.where(item_id: item.id).max.value %>
+	    <%end%>	
+	<li><%=item.itemname %>; Seller: <%= seller%> <b>Price: <%=pricing %></b></li>
+
+
 <%end%>
 </ul>
